@@ -77,7 +77,7 @@ class Application(tk.Frame):
         data = readFile(file_name, fake_message + file_name)
 
         self.button = tk.Button(self)
-        self.button["text"] = file_name
+        self.button["text"] = os.path.basename(file_name)
         self.button["command"] = self.say_hi
         self.button.config(fg="black", bg="yellow")
         self.button.pack(fill='both', side="top")
